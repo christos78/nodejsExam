@@ -34,7 +34,7 @@ ng serve -o
 ```
 binance,kraken,bittrex,bitfinex,bkex
 ```
-### Note: Il faut le service mongod soit lancé sur le poste pour pouvoir  enregistrer ou faire des requetes dessus. 
+### Note: Il faut que le service mongod soit lancé sur le poste pour pouvoir  enregistrer ou faire des requetes dessus. 
 
 6) Il est possible d'enregistrer cette liste dans mongoDB, cliquer juste sur ***Save***
 
