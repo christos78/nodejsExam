@@ -34,8 +34,9 @@ ng serve -o
 ```
 binance,kraken,bittrex,bitfinex,bkex
 ```
+### Note: Il faut le service mongod soit lancé sur le poste pour pouvoir  enregistrer ou faire des requetes dessus. 
 
-6) Il est possible d'enregistrer les cette liste dans mongoDB, cliquer juste sur ***Save***
+6) Il est possible d'enregistrer cette liste dans mongoDB, cliquer juste sur ***Save***
 
 7) Cliquer sur le nom d'un exchange pour avoir la liste des cryptos disponibles dessus avec son prix ainsi que le lien de redirection vers la plateforme pour trade
 
@@ -44,4 +45,4 @@ binance,kraken,bittrex,bitfinex,bkex
 
 9)  Raffrichir la page ou cliquer sur le premier bouton ***List*** pour enlever les listes affichés. On peut soliciter les données de mangoDB en appuyant sur le deuxième bouton ***List***. Toutes les valeurs présentes dans mongoDB correspondant aux listes des exchanges enregistrées précédement seront affichés avec la date à laquelle celle-ci a été enregistré
 
-10) Pour voir les cryptos d'une plateforme en particulier qui a été enregistrées dans mongoDB, cliquer sur le nom d'un exchange. Il ne sera affiché que les 200 derniers résulats qui ont été enregistrés.
+10)  Pour voir les cryptos d'une plateforme en particulier qui a été enregistré dans mongoDB, cliquer sur le nom d'un exchange. Il ne sera affiché que les 200 derniers résulats qui ont été enregistrés.
