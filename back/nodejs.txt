@@ -1,0 +1,41 @@
+https://github.com/kmarques
+docker-compose.yml
+version:'3'
+services:
+	node:
+		image:'node:10-alpine'
+		volumes:
+			-'./:/home/node/app'
+		working_dir:'/home/node/app'
+		ports:'3000:3000'
+		command:'npm install && npm start'
+
+
+
+lancer mongod
+puis mongorestore dans le dossier dump de data
+
+1)
+db.Sakila_films.find({"Actors.First name":"ED","Actors.Last name":"CHASE"}) - faux
+db.Sakila_films.find({"Actors": {$elemMatch:{"First name":"ED","Last name":"CHASE"}}}).pretty()
+
+2)
+db.Sakila_films.find({Description:/documentary/i, Category:/horror/i} - i pour la casse
+
+3)
+db.Sakila_films.find({Rating: "G"}).count() - moins ouf en perf
+db.Sakila_films.count({Rating: "G"})
+
+6)
+db.Sakila_films.aggregate([{$group: {_id: "$Rating", total: {$sum:1}}})
+
+scrapping
+navigateur
+element
+reseau
+XHR
+featured-post
+reponse
+
+npm cheerio
+

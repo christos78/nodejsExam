@@ -1,0 +1,40 @@
+<div class="jumbotron text-center">
+  <h2>NodeJS Exam </h2>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">      
+
+      <p>Lister les exchanges souhaités (ex: binance,kraken,bitfinex) - Données venant de Coin Market Cap</p> 
+      <input type="text" class="form-control" [(ngModel)]="exchanges">
+      <br>
+
+      <button class="btn btn-success" (click)="Display1(exchanges)">List</button>
+
+      <div *ngIf = "isShow_exchange">
+          <app-exchange></app-exchange>
+      </div>
+    
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <p>Lister les exchanges enregistrés en BDD - Données venant de MongoDB</p> 
+
+      <button class="btn btn-success" (click)="Display2()">List</button>
+
+      <div *ngIf = "isShow_exchange_bdd">
+          <app-exchange-mongo-db></app-exchange-mongo-db>
+      </div>
+      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div *ngIf="isShow_Exchange">
+    <table class="table table-bordered" style="margin-top:10px; border-collapse: collapse;">
+        <tr>
+            <td>Name</td>
+            <td>Volume 24h (USD)</td>
+            <td>Volume 7 jours (USD)</td>
+            <td>Volume 30 jours (USD)</td>
+            <td>Nombre de pairs dispo</td>
+            <td>Données enregistrées le </td>
+        </tr>
+        <tr *ngFor="let exchange of tab_exchange">
+            <td>
+                <button (click)="Display(exchange.name)">{{ exchange.name }}</button>
+            </td>
+            <td>{{ exchange.volume_24h }} </td>
+            <td>{{ exchange.volume_7d }}</td>
+            <td>{{ exchange.volume_30d }}</td>
+            <td>{{ exchange.num_market_pairs }}</td>
+            <td>{{ exchange.date }}</td>
+        </tr>
+    </table>
+</div>
+
+<div *ngIf="isShow_One_Exchange">
+    <h3>{{exchange_choisi}}</h3>    
+        <table class="table table-bordered" style="margin-top:10px; border-collapse: collapse;">
+            <tr>
+                <td>Market Pair Name</td>
+                <td>Price</td>
+                <td>Market Pair Devise</td>
+                <td>Market url</td>
+                <td>Données enregistrées le </td>
+            </tr>
+            <tr *ngFor="let crypto of tab_one_exchange">
+                <td>{{ crypto.market_pair_name }}</td>
+                <td>{{ crypto.price }} </td>
+                <td>{{ crypto.market_pair_devise }}</td>
+                <td><a href="{{crypto.market_url}}">{{ crypto.market_url }}</a></td>
+                <td>{{ crypto.date }}</td>
+            </tr>
+        </table>
+    
+    </div>

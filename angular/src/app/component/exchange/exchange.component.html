@@ -1,0 +1,51 @@
+<p>Liste Exchange : <button class="btn btn-success" (click)="saveData()">Save</button></p>
+
+<div class="alert alert-success" *ngIf="status_save_exchange==1">
+    <p>Liste des exchanges sauvegardée</p>
+</div>
+
+<div>
+    <table class="table table-bordered" style="margin-top:10px; border-collapse: collapse;">
+        <tr>
+            <td>Name</td>
+            <td>Volume 24h (USD)</td>
+            <td>Volume 7 jours (USD)</td>
+            <td>Volume 30 jours (USD)</td>
+            <td>Nombre de pairs dispo</td>
+        </tr>
+        <tr *ngFor="let exchange of tab_exchange">
+            <td>
+                <button (click)="Display(exchange.name)">{{ exchange.name }}</button>
+            </td>
+            <td>{{ exchange.volume_24h }} </td>
+            <td>{{ exchange.volume_7d }}</td>
+            <td>{{ exchange.volume_30d }}</td>
+            <td>{{ exchange.num_market_pairs }}</td>
+        </tr>
+    </table>
+</div>
+
+<div *ngIf="isShow_One_Exchange">
+    <button class="btn btn-success" (click)="saveData_Crypto()">Save Crypto</button>
+
+    <div class="alert alert-success" *ngIf="status_save_crypto==1">
+        <p>Liste des cryptos sauvegardée</p>
+    </div>
+
+    <table class="table table-bordered" style="margin-top:10px; border-collapse: collapse;">
+        <tr>
+            <td>Market Pair Name</td>
+            <td>Price</td>
+            <td>Market Pair Devise</td>
+            <td>Market url</td>
+
+        </tr>
+        <tr *ngFor="let crypto of tab_one_exchange">
+            <td>{{ crypto.market_pair_name }}</td>
+            <td>{{ crypto.price }} </td>
+            <td>{{ crypto.market_pair_devise }}</td>
+            <td><a href="{{crypto.market_url}}">{{ crypto.market_url }}</a></td>
+        </tr>
+    </table>
+
+</div>
